@@ -1,6 +1,6 @@
 cask "clawd-wars" do
-  version "2.15.0"
-  sha256 "78b582fd0ec42ff0c1c43184defb1a9ba37b3944177b5e889605cc42ce854725"
+  version "2.15.2"
+  sha256 "82b61c33f4c8e8112dc2c0df8b348525217d11d2fee4fba35a18739443d46a05"
 
   url "https://github.com/rodclemen/clawd-wars/releases/download/v#{version}/Clawd-Wars-#{version}.zip"
   name "Clawd Wars"
@@ -10,14 +10,6 @@ cask "clawd-wars" do
   depends_on macos: :ventura
 
   app "Clawd Wars.app"
-
-  # Not notarized yet: clear the download quarantine so macOS lets it open.
-  postflight_steps do
-    run "/usr/bin/xattr",
-        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Clawd Wars.app"],
-        writable_paths: ["Clawd Wars.app"],
-        writable_base:  :appdir
-  end
 
   uninstall quit:   "com.rodclemen.vaderclaude",
             script: {
