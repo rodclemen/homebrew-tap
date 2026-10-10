@@ -7,13 +7,16 @@ cask "clawd-wars" do
   desc "Claude Code sessions as a pixel-art Star Wars battle on your desktop"
   homepage "https://github.com/rodclemen/clawd-wars"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Clawd Wars.app"
 
-  postflight do
-    # Not notarized yet: clear the download quarantine so macOS lets it open.
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Clawd Wars.app"]
+  # Not notarized yet: clear the download quarantine so macOS lets it open.
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Clawd Wars.app"],
+        writable_paths: ["Clawd Wars.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit:   "com.rodclemen.vaderclaude",
