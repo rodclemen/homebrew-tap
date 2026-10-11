@@ -1,6 +1,6 @@
 cask "clawd-wars" do
-  version "2.25.0"
-  sha256 "4e6c03e79ae727821c46f54b0969ede02a31221e2c6bea0782347461976ebf0a"
+  version "2.26.0"
+  sha256 "600528a4ca854666a337b6b6a3cfc87ce34b7c1af0e11d15c4afbb590d5abf67"
 
   url "https://github.com/rodclemen/clawd-wars/releases/download/v#{version}/Clawd-Wars-#{version}.zip"
   name "Clawd Wars"
@@ -21,6 +21,8 @@ cask "clawd-wars" do
 
   zap trash: [
     "~/.claude/vader-status",
+    "~/Library/Application Support/Clawd Wars",
+    "~/Library/Screen Savers/Clawd Wars.saver",
     "~/Library/Preferences/com.rodclemen.vaderclaude.plist",
   ]
 end
