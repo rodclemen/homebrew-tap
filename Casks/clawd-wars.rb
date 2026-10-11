@@ -1,6 +1,6 @@
 cask "clawd-wars" do
-  version "2.23.1"
-  sha256 "6fd79301059b67ddb92b815193b4e6dcfb1c7241ead01c96e52ff7bd3f007a62"
+  version "2.24.0"
+  sha256 "e6701b7592289495615a56ba3bbb2b3b1b8c4612fb1cdbbcf743bda7686d916e"
 
   url "https://github.com/rodclemen/clawd-wars/releases/download/v#{version}/Clawd-Wars-#{version}.zip"
   name "Clawd Wars"
@@ -11,6 +11,8 @@ cask "clawd-wars" do
 
   app "Clawd Wars.app"
 
+  # brew runs this on upgrade too (uninstall, then install): the hooks come out, and the new app puts
+  # them back on its next launch.
   uninstall quit:   "com.rodclemen.vaderclaude",
             script: {
               executable: "#{appdir}/Clawd Wars.app/Contents/MacOS/ClawdWars",
