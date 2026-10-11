@@ -1,6 +1,6 @@
 cask "clawd-wars" do
-  version "2.26.3"
-  sha256 "f52d52dc35e41fde42e6e576a99ab228c60a0f2377494d15a4d8a5b1b268c71b"
+  version "2.27.0"
+  sha256 "a7292eb487841bd704c71b7b5b53cf2234bae0d795dfb05809400c4b7c08b697"
 
   url "https://github.com/rodclemen/clawd-wars/releases/download/v#{version}/Clawd-Wars-#{version}.zip"
   name "Clawd Wars"
