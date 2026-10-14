@@ -1,5 +1,5 @@
 # Homebrew tap
 
 ```sh
-brew install --cask rodclemen/tap/clawd-wars
+brew install --cask rodclemen/tap/star-clawds
 ```
