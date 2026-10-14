@@ -1,5 +1,7 @@
 # Homebrew tap
 
 ```sh
-brew install --cask rodclemen/tap/star-clawds
+brew tap rodclemen/tap
+brew trust rodclemen/tap      # newer Homebrew asks you to trust a third-party tap once
+brew install --cask star-clawds
 ```
