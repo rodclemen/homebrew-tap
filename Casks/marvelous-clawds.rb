@@ -13,8 +13,11 @@ cask "marvelous-clawds" do
   app "Clawd Clash.app"
 
   # Start in marvel, unless a universe was already picked.
-  preflight do
-    system_command "/bin/sh", args: ["-c", "defaults read com.rodclemen.clawdclash universe >/dev/null 2>&1 || defaults write com.rodclemen.clawdclash universe -string marvel"]
+  preflight_steps do
+    run "/bin/sh",
+        args:           ["-c", "defaults read com.rodclemen.clawdclash universe >/dev/null 2>&1 || defaults write com.rodclemen.clawdclash universe -string marvel"],
+        writable_paths: ["Library/Preferences"],
+        writable_base:  :home
   end
 
   # brew runs this on upgrade too (uninstall, then install): the hooks come out, and the new app puts
