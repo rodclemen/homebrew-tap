@@ -1,6 +1,6 @@
 cask "star-clawds" do
-  version "3.5.0"
-  sha256 "6516d4b789005acab49e45297ac75a39f92c37fd2cb31ba65ac375d806525870"
+  version "3.5.1"
+  sha256 "f212c0bccafe869f670e40e263606207250cfb6c2e491d53cd80afaa70e43603"
 
   url "https://github.com/rodclemen/clawd-clash/releases/download/v#{version}/Clawd-Clash-#{version}.zip"
   name "Clawd Clash"
@@ -8,6 +8,7 @@ cask "star-clawds" do
   homepage "https://github.com/rodclemen/clawd-clash"
 
   depends_on macos: :ventura
+  depends_on arch: :arm64
   conflicts_with cask: ["clawd-clash", "marvelous-clawds", "detective-clawds"]
 
   app "Clawd Clash.app"
@@ -36,5 +37,6 @@ cask "star-clawds" do
     "~/Library/Application Support/Clawd Clash",
     "~/Library/Screen Savers/Clawd Clash.saver",
     "~/Library/Preferences/com.rodclemen.clawdclash.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Application Support/Clawd Clash Saver",
   ]
 end
