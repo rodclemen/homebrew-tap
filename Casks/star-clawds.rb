@@ -1,6 +1,6 @@
 cask "star-clawds" do
-  version "3.7.0"
-  sha256 "78619e23c7aa305dec416f4a1726511e0399b86e5b8e73ec461794110fe14095"
+  version "3.7.1"
+  sha256 "b68ac119ad2ae773d3df462674c186e2e55dbac9c98d486ad532b676795b4cac"
 
   url "https://github.com/rodclemen/clawd-clash/releases/download/v#{version}/Clawd-Clash-#{version}.zip"
   name "Clawd Clash"
