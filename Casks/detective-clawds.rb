@@ -1,6 +1,6 @@
 cask "detective-clawds" do
-  version "3.7.1"
-  sha256 "b68ac119ad2ae773d3df462674c186e2e55dbac9c98d486ad532b676795b4cac"
+  version "4.0.0"
+  sha256 "9f57f1d8273c0283824188ef3e4057f947d3221c47a5977ba78ccf576f78f7c8"
 
   url "https://github.com/rodclemen/clawd-clash/releases/download/v#{version}/Clawd-Clash-#{version}.zip"
   name "Clawd Clash"
