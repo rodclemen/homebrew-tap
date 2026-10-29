@@ -1,6 +1,6 @@
 cask "detective-clawds" do
-  version "4.1.1"
-  sha256 "0a87708fbd33bddfa44f075279abc9cb2d0fb1452f3fe67a7a23ad20ef38fca2"
+  version "4.2.0"
+  sha256 "2664c98d9c7e18e3b808d8dbaddb691ef933a106c75a87c0b55454f473a8daeb"
 
   url "https://github.com/rodclemen/clawd-clash/releases/download/v#{version}/Clawd-Clash-#{version}.zip"
   name "Clawd Clash"
@@ -9,7 +9,7 @@ cask "detective-clawds" do
 
   depends_on macos: :ventura
   depends_on arch: :arm64
-  conflicts_with cask: ["clawd-clash", "star-clawds", "marvelous-clawds"]
+  conflicts_with cask: ["clawd-clash", "star-clawds", "marvelous-clawds", "clawds-of-the-universe"]
 
   app "Clawd Clash.app"
 
